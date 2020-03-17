@@ -41,19 +41,26 @@ public class Main extends Application {
             }
         });
 
+        //Card buttons
+        Button cardButton1 = new Button("Play me");
+        cardButton1.setOnAction(e -> {
+            CardBox.display("Card", "Powerful sounding name");
+        });
+
         GridPane grid = new GridPane();
         grid.setHgap(8);
         grid.setVgap(10);
         grid.setPadding(new Insets(10, 10, 10, 10));
-        Background background = new Background(new BackgroundFill(Color.BEIGE, new CornerRadii(20), new Insets(0)));
+        Background background = new Background(new BackgroundFill(Color.BEIGE, new CornerRadii(60), new Insets(10)));
         grid.setBackground(background);
 
         grid.add(button, 5, 5);
+        grid.add(cardButton1, 20, 20);
+
 
         Scene scene = new Scene(grid, 500, 500);
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
 
